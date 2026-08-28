@@ -1,0 +1,348 @@
+{
+  "model": "DeepSeek-V3",
+  "elapsed_seconds": 14.807561159133911,
+  "input_tokens": 1354,
+  "output_tokens": 2894,
+  "raw_response": "{\n  \"entities\": [\n    {\n      \"id\": \"loc_1\",\n      \"type\": \"Location\",\n      \"name\": \"观测站\",\n      \"properties\": {\n        \"description\": \"天气数据观测点\"\n      }\n    },\n      {\n      \"id\": \"period_2023_06_08_07_27\",\n      \"type\": \"TimePeriod\",\n      \"name\": \"2023-06-08至2023-07-27\",\n      \"properties\": {\n        \"start_date\": \"2023-06-08\",\n        \"end_date\": \"2023-07-27\",\n        \"total_days\": 1097\n      }\n    },\n    {\n      \"id\": \"period_2023_06_08_06_17\",\n      \"type\": \"TimePeriod\",\n      \"name\": \"2023-06-08至2023-06-17\",\n      \"properties\": {\n        \"start_date\": \"2023-06-08\",\n        \"end_date\": \"2023-06-17\",\n        \"duration_days\": 10,\n        \"description\": \"连续干旱期\"\n      }\n    },\n    {\n      \"id\": \"period_2023_06_18_06_18\",\n      \"type\": \"TimePeriod\",\n      \"name\": \"2023-06-18\",\n      \"properties\": {\n        \"date\": \"2023-06-18\",\n        \"description\": \"降雨日\"\n      }\n    },\n    {\n      \"id\": \"period_2023_06_19_06_23\",\n      \"type\": \"TimePeriod\",\n      \"name\": \"2023-06-19至2023-06-23\",\n      \"properties\": {\n        \"start_date\": \"2023-06-19\",\n        \"end_date\": \"2023-06-23\",\n        \"duration_days\": 5,\n        \"description\": \"干旱期\"\n      }\n    },\n    {\n      \"id\": \"period_2023_06_24_06_25\",\n      \"type\": \"TimePeriod\",\n      \"name\": \"2023-06-24至2023-06-25\",\n      \"properties\": {\n        \"start_date\": \"2023-06-24\",\n        \"end_date\": \"2023-06-25\",\n        \"duration_days\": 2,\n        \"description\": \"降雨或小雨期\"\n      }\n    },\n    {\n      \"id\": \"period_2023_06_26_06_27\",\n      \"type\": \"TimePeriod\",\n      \"name\": \"2023-06-26至2023-06-27\",\n      \"properties\": {\n        \"start_date\": \"2023-06-26\",\n        \"end_date\": \"2023-06-27\",\n        \"duration_days\": 2,\n        \"description\": \"干旱期\"\n      }\n    },\n    {\n      \"id\": \"event_dry_spell_1\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"干旱事件1\",\n      \"properties\": {\n        \"start_date\": \"2023-06-08\",\n        \"end_date\": \"2023-06-17\",\n        \"duration_days\": 10,\n        \"max_dry_streak\": 10,\n        \"max_temperature\": 34.4,\n        \"min_temperature\": 15.7,\n        \"max_wind_speed\": 29.9,\n        \"strong_wind_days\": 8,\n        \"dust_storm_risk_days\": 7\n      }\n    },\n    {\n      \"id\": \"event_rain_1\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"降雨事件1\",\n      \"properties\": {\n        \"date\": \"2023-06-18\",\n        \"precipitation\": 9.1,\n        \"temperature_max\": 21.8,\n        \"temperature_min\": 16.4,\n        \"humidity\": 80,\n        \"wind_speed_max\": 12.3,\n        \"continuous_rain_streak\": 2\n      }\n    },\n    {\n      \"id\": \"event_dry_spell_2\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"干旱事件2\",\n      \"properties\": {\n        \"start_date\": \"2023-06-19\",\n        \"end_date\": \"2023-06-23\",\n        \"duration_days\": 5,\n        \"max_dry_streak\": 6,\n        \"max_temperature\": 35.3,\n        \"min_temperature\": 15.1,\n        \"max_wind_speed\": 23.5,\n        \"strong_wind_days\": 3,\n        \"dust_storm_risk_days\": 1\n      }\n    },\n    {\n      \"id\": \"event_rain_2\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"降雨事件2\",\n      \"properties\": {\n        \"start_date\": \"2023-06-24\",\n        \"end_date\": \"2023-06-25\",\n        \"precipitation_total\": 1.8,\n        \"temperature_max\": 30.8,\n        \"temperature_min\": 18.1,\n        \"humidity_max\": 48,\n        \"wind_speed_max\": 23.3,\n        \"continuous_rain_streak\": 2\n      }\n    },\n    {\n      \"id\": \"event_dry_spell_3\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"干旱事件3\",\n      \"properties\": {\n        \"start_date\": \"2023-06-26\",\n        \"end_date\": \"2023-06-27\",\n        \"duration_days\": 2,\n        \"max_dry_streak\": 4,\n        \"max_temperature\": 32.8,\n        \"min_temperature\": 17.5,\n        \"max_wind_speed\": 33.3,\n        \"strong_wind_days\": 1,\n        \"dust_storm_risk_days\": 0\n      }\n    },\n    {\n      \"id\": \"event_heat_1\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"高温事件\",\n      \"properties\": {\n        \"date\": \"2023-06-22\",\n        \"temperature_max\": 35.3,\n        \"heat_day\": true,\n        \"severe_heat_day\": false\n      }\n    },\n    {\n      \"id\": \"event_strong_wind_1\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"大风事件\",\n      \"properties\": {\n        \"date\": \"2023-06-27\",\n        \"wind_speed_max\": 33.3,\n        \"strong_wind_day\": true\n      }\n    }\n  ],\n  \"relationships\": [\n    {\n      \"source\": \"event_dry_spell_1\",\n      \"target\": \"period_2023_06_08_06_17\",\n      \"type\": \"OCCURRED_ON\",\n      \"properties\": {\n        \"description\": \"干旱事件发生在此时间段\"\n      }\n    },\n    {\n      \"source\": \"event_rain_1\",\n      \"target\": \"period_2023_06_18_06_18\",\n      \"type\": \"OCCURRED_ON\",\n      \"properties\": {\n        \"description\": \"降雨事件发生在此日期\"\n      }\n    },\n    {\n      \"source\": \"event_dry_spell_2\",\n      \"target\": \"period_2023_06_19_06_23\",\n      \"type\": \"OCCURRED_ON\",\n      \"properties\": {\n        \"description\": \"干旱事件发生在此时间段\"\n      }\n    },\n    {\n      \"source\": \"event_rain_2\",\n      \"target\": \"period_2023_06_24_06_25\",\n      \"type\": \"OCCURRED_ON\",\n      \"properties\": {\n        \"description\": \"降雨事件发生在此时间段\"\n      }\n    },\n    {\n      \"source\": \"event_dry_spell_3\",\n      \"target\": \"period_2023_06_26_06_27\",\n      \"type\": \"OCCURRED_ON\",\n      \"properties\": {\n        \"description\": \"干旱事件发生在此时间段\"\n      }\n    },\n    {\n      \"source\": \"event_dry_spell_1\",\n      \"target\": \"event_rain_1\",\n      \"type\": \"FOLLOWED_BY\",\n      \"properties\": {\n        \"gap_days\": 0,\n        \"description\": \"干旱事件后紧接着降雨\"\n      }\n    },\n    {\n      \"source\": \"event_rain_1\",\n      \"target\": \"event_dry_spell_2\",\n      \"type\": \"FOLLOWED_BY\",\n      \"properties\": {\n        \"gap_days\": 1,\n        \"description\": \"降雨后进入干旱期\"\n      }\n    },\n    {\n      \"source\": \"event_dry_spell_2\",\n      \"target\": \"event_rain_2\",\n      \"type\": \"FOLLOWED_BY\",\n      \"properties\": {\n        \"gap_days\": 1,\n        \"description\": \"干旱后出现降雨\"\n      }\n    },\n    {\n      \"source\": \"event_rain_2\",\n      \"target\": \"event_dry_spell_3\",\n      \"type\": \"FOLLOWED_BY\",\n      \"properties\": {\n        \"gap_days\": 1,\n        \"description\": \"降雨后进入干旱\"\n      }\n    },\n    {\n      \"source\": \"event_dry_spell_1\",\n      \"target\": \"event_dry_spell_2\",\n      \"type\": \"SIMILAR_TO\",\n      \"properties\": {\n        \"similarity\": \"干旱事件，但持续时间不同\"\n      }\n    },\n    {\n      \"source\": \"event_dry_spell_2\",\n      \"target\": \"event_dry_spell_3\",\n      \"type\": \"SIMILAR_TO\",\n      \"properties\": {\n        \"similarity\": \"干旱事件，持续时间递减\"\n      }\n    },\n    {\n      \"source\": \"event_heat_1\",\n      \"target\": \"event_dry_spell_2\",\n      \"type\": \"HAS_EVENT\",\n      \"properties\": {\n        \"description\": \"高温日出现在干旱期内\"\n      }\n    },\n    {\n      \"source\": \"event_strong_wind_1\",\n      \"target\": \"event_dry_spell_3\",\n      \"type\": \"HAS_EVENT\",\n      \"properties\": {\n        \"description\": \"大风事件出现在干旱期内\"\n      }\n    },\n    {\n      \"source\": \"loc_1\",\n      \"target\": \"period_2023_06_08_07_27\",\n      \"type\": \"OBSERVED_AT\",\n      \"properties\": {\n        \"description\": \"观测站记录该时间段数据\"\n      }\n    }\n  ],\n  \"rules\": [\n    {\n      \"rule\": \"连续干旱超过10天后出现降雨的概率为100%\",\n      \"description\": \"在样本中，连续干旱10天后（2023-06-17）次日出现降雨（2023-06-18），且降雨量较大（9.1mm）。\",\n      \"confidence\": 1.0,\n      \"support\": 1\n    },\n    {\n      \"rule\": \"连续干旱5天后出现降雨的概率为100%\",\n      \"description\": \"在样本中，连续干旱5天后（2023-06-23）次日出现降雨（2023-06-24），但降雨量较小（1.6mm）。\",\n      \"confidence\": 1.0,\n      \"support\": 1\n    },\n    {\n      \"rule\": \"干旱期通常伴随大风天气\",\n      \"description\": \"在干旱事件1中，10天内有8天为强风日；干旱事件2中5天内有3天为强风日；干旱事件3中2天内有1天为强风日。\",\n      \"confidence\": 0.8,\n      \"support\": 3\n    },\n    {\n      \"rule\": \"干旱期常伴随沙尘暴风险\",\n      \"description\": \"在干旱事件1中，10天内有7天有沙尘暴风险；干旱事件2中5天内有1天有风险；干旱事件3中无风险。\",\n      \"confidence\": 0.67,\n      \"support\": 3\n    },\n    {\n      \"rule\": \"降雨后湿度显著升高\",\n      \"description\": \"降雨日（2023-06-18）相对湿度为80%，而干旱期平均湿度约为25-45%。\",\n      \"confidence\": 1.0,\n      \"support\": 1\n    },\n    {\n      \"rule\": \"降雨后温度下降\",\n      \"description\": \"降雨日最高温度21.8°C，明显低于干旱期的30-35°C。\",\n      \"confidence\": 1.0,\n      \"support\": 1\n    },\n    {\n      \"rule\": \"高温日（≥35°C）出现在干旱期\",\n      \"description\": \"2023-06-22最高温度35.3°C，处于干旱事件2中。\",\n      \"confidence\": 1.0,\n      \"support\": 1\n    },\n    {\n      \"rule\": \"强风日与干旱日高度相关\",\n      \"description\": \"在干旱日，强风日比例较高（如干旱事件1中80%为强风日）。\",\n      \"confidence\": 0.8,\n      \"support\": 3\n    }\n  ]\n}",
+  "parsed": {
+    "entities": [
+      {
+        "id": "loc_1",
+        "type": "Location",
+        "name": "观测站",
+        "properties": {
+          "description": "天气数据观测点"
+        }
+      },
+      {
+        "id": "period_2023_06_08_07_27",
+        "type": "TimePeriod",
+        "name": "2023-06-08至2023-07-27",
+        "properties": {
+          "start_date": "2023-06-08",
+          "end_date": "2023-07-27",
+          "total_days": 1097
+        }
+      },
+      {
+        "id": "period_2023_06_08_06_17",
+        "type": "TimePeriod",
+        "name": "2023-06-08至2023-06-17",
+        "properties": {
+          "start_date": "2023-06-08",
+          "end_date": "2023-06-17",
+          "duration_days": 10,
+          "description": "连续干旱期"
+        }
+      },
+      {
+        "id": "period_2023_06_18_06_18",
+        "type": "TimePeriod",
+        "name": "2023-06-18",
+        "properties": {
+          "date": "2023-06-18",
+          "description": "降雨日"
+        }
+      },
+      {
+        "id": "period_2023_06_19_06_23",
+        "type": "TimePeriod",
+        "name": "2023-06-19至2023-06-23",
+        "properties": {
+          "start_date": "2023-06-19",
+          "end_date": "2023-06-23",
+          "duration_days": 5,
+          "description": "干旱期"
+        }
+      },
+      {
+        "id": "period_2023_06_24_06_25",
+        "type": "TimePeriod",
+        "name": "2023-06-24至2023-06-25",
+        "properties": {
+          "start_date": "2023-06-24",
+          "end_date": "2023-06-25",
+          "duration_days": 2,
+          "description": "降雨或小雨期"
+        }
+      },
+      {
+        "id": "period_2023_06_26_06_27",
+        "type": "TimePeriod",
+        "name": "2023-06-26至2023-06-27",
+        "properties": {
+          "start_date": "2023-06-26",
+          "end_date": "2023-06-27",
+          "duration_days": 2,
+          "description": "干旱期"
+        }
+      },
+      {
+        "id": "event_dry_spell_1",
+        "type": "WeatherEvent",
+        "name": "干旱事件1",
+        "properties": {
+          "start_date": "2023-06-08",
+          "end_date": "2023-06-17",
+          "duration_days": 10,
+          "max_dry_streak": 10,
+          "max_temperature": 34.4,
+          "min_temperature": 15.7,
+          "max_wind_speed": 29.9,
+          "strong_wind_days": 8,
+          "dust_storm_risk_days": 7
+        }
+      },
+      {
+        "id": "event_rain_1",
+        "type": "WeatherEvent",
+        "name": "降雨事件1",
+        "properties": {
+          "date": "2023-06-18",
+          "precipitation": 9.1,
+          "temperature_max": 21.8,
+          "temperature_min": 16.4,
+          "humidity": 80,
+          "wind_speed_max": 12.3,
+          "continuous_rain_streak": 2
+        }
+      },
+      {
+        "id": "event_dry_spell_2",
+        "type": "WeatherEvent",
+        "name": "干旱事件2",
+        "properties": {
+          "start_date": "2023-06-19",
+          "end_date": "2023-06-23",
+          "duration_days": 5,
+          "max_dry_streak": 6,
+          "max_temperature": 35.3,
+          "min_temperature": 15.1,
+          "max_wind_speed": 23.5,
+          "strong_wind_days": 3,
+          "dust_storm_risk_days": 1
+        }
+      },
+      {
+        "id": "event_rain_2",
+        "type": "WeatherEvent",
+        "name": "降雨事件2",
+        "properties": {
+          "start_date": "2023-06-24",
+          "end_date": "2023-06-25",
+          "precipitation_total": 1.8,
+          "temperature_max": 30.8,
+          "temperature_min": 18.1,
+          "humidity_max": 48,
+          "wind_speed_max": 23.3,
+          "continuous_rain_streak": 2
+        }
+      },
+      {
+        "id": "event_dry_spell_3",
+        "type": "WeatherEvent",
+        "name": "干旱事件3",
+        "properties": {
+          "start_date": "2023-06-26",
+          "end_date": "2023-06-27",
+          "duration_days": 2,
+          "max_dry_streak": 4,
+          "max_temperature": 32.8,
+          "min_temperature": 17.5,
+          "max_wind_speed": 33.3,
+          "strong_wind_days": 1,
+          "dust_storm_risk_days": 0
+        }
+      },
+      {
+        "id": "event_heat_1",
+        "type": "WeatherEvent",
+        "name": "高温事件",
+        "properties": {
+          "date": "2023-06-22",
+          "temperature_max": 35.3,
+          "heat_day": true,
+          "severe_heat_day": false
+        }
+      },
+      {
+        "id": "event_strong_wind_1",
+        "type": "WeatherEvent",
+        "name": "大风事件",
+        "properties": {
+          "date": "2023-06-27",
+          "wind_speed_max": 33.3,
+          "strong_wind_day": true
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "event_dry_spell_1",
+        "target": "period_2023_06_08_06_17",
+        "type": "OCCURRED_ON",
+        "properties": {
+          "description": "干旱事件发生在此时间段"
+        }
+      },
+      {
+        "source": "event_rain_1",
+        "target": "period_2023_06_18_06_18",
+        "type": "OCCURRED_ON",
+        "properties": {
+          "description": "降雨事件发生在此日期"
+        }
+      },
+      {
+        "source": "event_dry_spell_2",
+        "target": "period_2023_06_19_06_23",
+        "type": "OCCURRED_ON",
+        "properties": {
+          "description": "干旱事件发生在此时间段"
+        }
+      },
+      {
+        "source": "event_rain_2",
+        "target": "period_2023_06_24_06_25",
+        "type": "OCCURRED_ON",
+        "properties": {
+          "description": "降雨事件发生在此时间段"
+        }
+      },
+      {
+        "source": "event_dry_spell_3",
+        "target": "period_2023_06_26_06_27",
+        "type": "OCCURRED_ON",
+        "properties": {
+          "description": "干旱事件发生在此时间段"
+        }
+      },
+      {
+        "source": "event_dry_spell_1",
+        "target": "event_rain_1",
+        "type": "FOLLOWED_BY",
+        "properties": {
+          "gap_days": 0,
+          "description": "干旱事件后紧接着降雨"
+        }
+      },
+      {
+        "source": "event_rain_1",
+        "target": "event_dry_spell_2",
+        "type": "FOLLOWED_BY",
+        "properties": {
+          "gap_days": 1,
+          "description": "降雨后进入干旱期"
+        }
+      },
+      {
+        "source": "event_dry_spell_2",
+        "target": "event_rain_2",
+        "type": "FOLLOWED_BY",
+        "properties": {
+          "gap_days": 1,
+          "description": "干旱后出现降雨"
+        }
+      },
+      {
+        "source": "event_rain_2",
+        "target": "event_dry_spell_3",
+        "type": "FOLLOWED_BY",
+        "properties": {
+          "gap_days": 1,
+          "description": "降雨后进入干旱"
+        }
+      },
+      {
+        "source": "event_dry_spell_1",
+        "target": "event_dry_spell_2",
+        "type": "SIMILAR_TO",
+        "properties": {
+          "similarity": "干旱事件，但持续时间不同"
+        }
+      },
+      {
+        "source": "event_dry_spell_2",
+        "target": "event_dry_spell_3",
+        "type": "SIMILAR_TO",
+        "properties": {
+          "similarity": "干旱事件，持续时间递减"
+        }
+      },
+      {
+        "source": "event_heat_1",
+        "target": "event_dry_spell_2",
+        "type": "HAS_EVENT",
+        "properties": {
+          "description": "高温日出现在干旱期内"
+        }
+      },
+      {
+        "source": "event_strong_wind_1",
+        "target": "event_dry_spell_3",
+        "type": "HAS_EVENT",
+        "properties": {
+          "description": "大风事件出现在干旱期内"
+        }
+      },
+      {
+        "source": "loc_1",
+        "target": "period_2023_06_08_07_27",
+        "type": "OBSERVED_AT",
+        "properties": {
+          "description": "观测站记录该时间段数据"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "rule": "连续干旱超过10天后出现降雨的概率为100%",
+        "description": "在样本中，连续干旱10天后（2023-06-17）次日出现降雨（2023-06-18），且降雨量较大（9.1mm）。",
+        "confidence": 1.0,
+        "support": 1
+      },
+      {
+        "rule": "连续干旱5天后出现降雨的概率为100%",
+        "description": "在样本中，连续干旱5天后（2023-06-23）次日出现降雨（2023-06-24），但降雨量较小（1.6mm）。",
+        "confidence": 1.0,
+        "support": 1
+      },
+      {
+        "rule": "干旱期通常伴随大风天气",
+        "description": "在干旱事件1中，10天内有8天为强风日；干旱事件2中5天内有3天为强风日；干旱事件3中2天内有1天为强风日。",
+        "confidence": 0.8,
+        "support": 3
+      },
+      {
+        "rule": "干旱期常伴随沙尘暴风险",
+        "description": "在干旱事件1中，10天内有7天有沙尘暴风险；干旱事件2中5天内有1天有风险；干旱事件3中无风险。",
+        "confidence": 0.67,
+        "support": 3
+      },
+      {
+        "rule": "降雨后湿度显著升高",
+        "description": "降雨日（2023-06-18）相对湿度为80%，而干旱期平均湿度约为25-45%。",
+        "confidence": 1.0,
+        "support": 1
+      },
+      {
+        "rule": "降雨后温度下降",
+        "description": "降雨日最高温度21.8°C，明显低于干旱期的30-35°C。",
+        "confidence": 1.0,
+        "support": 1
+      },
+      {
+        "rule": "高温日（≥35°C）出现在干旱期",
+        "description": "2023-06-22最高温度35.3°C，处于干旱事件2中。",
+        "confidence": 1.0,
+        "support": 1
+      },
+      {
+        "rule": "强风日与干旱日高度相关",
+        "description": "在干旱日，强风日比例较高（如干旱事件1中80%为强风日）。",
+        "confidence": 0.8,
+        "support": 3
+      }
+    ]
+  }
+}

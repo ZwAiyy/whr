@@ -1,0 +1,39 @@
+{
+  "models_compared": [
+    "deepseek",
+    "qwen",
+    "mimo"
+  ],
+  "metrics": {
+    "DeepSeek-V3": {
+      "elapsed_seconds": 14.807561159133911,
+      "tokens": {
+        "input": 1354,
+        "output": 2894
+      },
+      "entities_count": 14,
+      "relationships_count": 14,
+      "rules_count": 8
+    },
+    "通义千问-Max": {
+      "elapsed_seconds": 21.28152632713318,
+      "tokens": {
+        "input": 1404,
+        "output": 1007
+      },
+      "entities_count": 6,
+      "relationships_count": 9,
+      "rules_count": 3
+    },
+    "MiMo": {
+      "elapsed_seconds": 105.55997157096863,
+      "tokens": {
+        "input": 1402,
+        "output": 5924
+      },
+      "entities_count": 5,
+      "relationships_count": 3,
+      "rules_count": 3
+    }
+  }
+}

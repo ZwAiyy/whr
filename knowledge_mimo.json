@@ -1,0 +1,97 @@
+{
+  "model": "MiMo",
+  "elapsed_seconds": 105.55997157096863,
+  "input_tokens": 1402,
+  "output_tokens": 5924,
+  "raw_response": "{\n  \"entities\": [\n    {\n      \"id\": \"e1\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"HighTemperatureEvent\",\n      \"properties\": {\n        \"date\": \"2023-06-22\",\n        \"temperature_2m_max\": 35.3,\n        \"is_heat_day\": true\n      }\n    },\n    {\n      \"id\": \"e2\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"RainEvent\",\n      \"properties\": {\n        \"date\": \"2023-06-18\",\n        \"precipitation_sum\": 9.1,\n        \"is_rainy_day\": true\n      }\n    },\n    {\n      \"id\": \"e3\",\n      \"type\": \"TimePeriod\",\n      \"name\": \"ExtendedDryPeriod\",\n      \"properties\": {\n        \"start_date\": \"2023-06-08\",\n        \"end_date\": \"2023-06-17\",\n        \"duration_days\": 10,\n        \"dry_streak\": 10\n      }\n    },\n    {\n      \"id\": \"e4\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"StrongWindDay\",\n      \"properties\": {\n        \"date\": \"2023-06-15\",\n        \"wind_speed_10m_max\": 27.1,\n        \"is_strong_wind_day\": true\n      }\n    },\n    {\n      \"id\": \"e5\",\n      \"type\": \"WeatherRecord\",\n      \"name\": \"ExtremeHeatRecord\",\n      \"properties\": {\n        \"date\": \"2023-06-22\",\n        \"temperature_2m_max\": 35.3,\n        \"temperature_2m_min\": 19.6,\n        \"wind_speed_10m_max\": 16.6,\n        \"relative_humidity_2m_mean\": 25,\n        \"is_heat_day\": true\n      }\n    }\n  ],\n  \"relationships\": [\n    {\n      \"source\": \"e3\",\n      \"target\": \"e2\",\n      \"type\": \"FOLLOWED_BY\",\n      \"properties\": {\n        \"immediate_next_day\": true,\n        \"precipitation_after\": 9.1\n      }\n    },\n    {\n      \"source\": \"e3\",\n      \"target\": \"e4\",\n      \"type\": \"HAS_EVENT\",\n      \"properties\": {\n        \"event_date\": \"2023-06-15\"\n      }\n    },\n    {\n      \"source\": \"e3\",\n      \"target\": \"e1\",\n      \"type\": \"ASSOCIATED_WITH\",\n      \"properties\": {\n        \"days_after_dry_period\": 5\n      }\n    }\n  ],\n  \"rules\": [\n    \"连续干旱超过10天后，出现降雨的概率较高，且降水量可能显著（如9.1mm）。\",\n    \"高温日（>35°C）往往发生在长干期结束后，且通常不伴随强风。\",\n    \"在长干期内，强风日频繁出现，表明干燥天气与高风速相关联。\"\n  ]\n}",
+  "parsed": {
+    "entities": [
+      {
+        "id": "e1",
+        "type": "WeatherEvent",
+        "name": "HighTemperatureEvent",
+        "properties": {
+          "date": "2023-06-22",
+          "temperature_2m_max": 35.3,
+          "is_heat_day": true
+        }
+      },
+      {
+        "id": "e2",
+        "type": "WeatherEvent",
+        "name": "RainEvent",
+        "properties": {
+          "date": "2023-06-18",
+          "precipitation_sum": 9.1,
+          "is_rainy_day": true
+        }
+      },
+      {
+        "id": "e3",
+        "type": "TimePeriod",
+        "name": "ExtendedDryPeriod",
+        "properties": {
+          "start_date": "2023-06-08",
+          "end_date": "2023-06-17",
+          "duration_days": 10,
+          "dry_streak": 10
+        }
+      },
+      {
+        "id": "e4",
+        "type": "WeatherEvent",
+        "name": "StrongWindDay",
+        "properties": {
+          "date": "2023-06-15",
+          "wind_speed_10m_max": 27.1,
+          "is_strong_wind_day": true
+        }
+      },
+      {
+        "id": "e5",
+        "type": "WeatherRecord",
+        "name": "ExtremeHeatRecord",
+        "properties": {
+          "date": "2023-06-22",
+          "temperature_2m_max": 35.3,
+          "temperature_2m_min": 19.6,
+          "wind_speed_10m_max": 16.6,
+          "relative_humidity_2m_mean": 25,
+          "is_heat_day": true
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "e3",
+        "target": "e2",
+        "type": "FOLLOWED_BY",
+        "properties": {
+          "immediate_next_day": true,
+          "precipitation_after": 9.1
+        }
+      },
+      {
+        "source": "e3",
+        "target": "e4",
+        "type": "HAS_EVENT",
+        "properties": {
+          "event_date": "2023-06-15"
+        }
+      },
+      {
+        "source": "e3",
+        "target": "e1",
+        "type": "ASSOCIATED_WITH",
+        "properties": {
+          "days_after_dry_period": 5
+        }
+      }
+    ],
+    "rules": [
+      "连续干旱超过10天后，出现降雨的概率较高，且降水量可能显著（如9.1mm）。",
+      "高温日（>35°C）往往发生在长干期结束后，且通常不伴随强风。",
+      "在长干期内，强风日频繁出现，表明干燥天气与高风速相关联。"
+    ]
+  }
+}

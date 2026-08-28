@@ -1,0 +1,146 @@
+{
+  "model": "通义千问-Max",
+  "elapsed_seconds": 21.28152632713318,
+  "input_tokens": 1404,
+  "output_tokens": 1007,
+  "raw_response": "{\n  \"entities\": [\n    {\n      \"id\": \"E1\",\n      \"type\": \"WeatherRecord\",\n      \"name\": \"2023-06-08 Weather Record\",\n      \"properties\": {\n        \"temperature_2m_max\": 31.4,\n        \"temperature_2m_min\": 16.4,\n        \"precipitation_sum\": 0.0,\n        \"wind_speed_10m_max\": 20.9,\n        \"relative_humidity_2m_mean\": 24\n      }\n    },\n    {\n      \"id\": \"E2\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"Dry Streak\",\n      \"properties\": {\n        \"duration\": 10,\n        \"start_date\": \"2023-06-08\",\n        \"end_date\": \"2023-06-17\"\n      }\n    },\n    {\n      \"id\": \"E3\",\n      \"type\": \"Location\",\n      \"name\": \"Sample Location\",\n      \"properties\": {}\n    },\n    {\n      \"id\": \"E4\",\n      \"type\": \"TimePeriod\",\n      \"name\": \"June 2023\",\n      \"properties\": {\n        \"start_date\": \"2023-06-01\",\n        \"end_date\": \"2023-06-30\"\n      }\n    },\n    {\n      \"id\": \"E5\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"Heat Day on 2023-06-22\",\n      \"properties\": {\n        \"date\": \"2023-06-22\",\n        \"temperature_2m_max\": 35.3\n      }\n    },\n    {\n      \"id\": \"E6\",\n      \"type\": \"WeatherEvent\",\n      \"name\": \"Rainy Day on 2023-06-18\",\n      \"properties\": {\n        \"date\": \"2023-06-18\",\n        \"precipitation_sum\": 9.1\n      }\n    }\n  ],\n  \"relationships\": [\n    {\n      \"source\": \"E1\",\n      \"target\": \"E3\",\n      \"type\": \"OCCURRED_AT\",\n      \"properties\": {}\n    },\n    {\n      \"source\": \"E2\",\n      \"target\": \"E3\",\n      \"type\": \"OCCURRED_AT\",\n      \"properties\": {}\n    },\n    {\n      \"source\": \"E1\",\n      \"target\": \"E4\",\n      \"type\": \"OCCURRED_IN\",\n      \"properties\": {}\n    },\n    {\n      \"source\": \"E2\",\n      \"target\": \"E4\",\n      \"type\": \"OCCURRED_IN\",\n      \"properties\": {}\n    },\n    {\n      \"source\": \"E5\",\n      \"target\": \"E3\",\n      \"type\": \"OCCURRED_AT\",\n      \"properties\": {}\n    },\n    {\n      \"source\": \"E5\",\n      \"target\": \"E4\",\n      \"type\": \"OCCURRED_IN\",\n      \"properties\": {}\n    },\n    {\n      \"source\": \"E6\",\n      \"target\": \"E3\",\n      \"type\": \"OCCURRED_AT\",\n      \"properties\": {}\n    },\n    {\n      \"source\": \"E6\",\n      \"target\": \"E4\",\n      \"type\": \"OCCURRED_IN\",\n      \"properties\": {}\n    },\n    {\n      \"source\": \"E2\",\n      \"target\": \"E6\",\n      \"type\": \"ENDED_BY\",\n      \"properties\": {}\n    }\n  ],\n  \"rules\": [\n    {\n      \"description\": \"连续干旱超过 10 天后出现降雨的概率为 100%\",\n      \"details\": {\n        \"dry_streak_duration\": 10,\n        \"probability_of_rain_after_dry_streak\": 1.0\n      }\n    },\n    {\n      \"description\": \"高温日与大风日的共现关系：在高温日中，有 50% 的日子也是强风日\",\n      \"details\": {\n        \"heat_day_count\": 1,\n        \"strong_wind_on_heat_day_count\": 1,\n        \"probability_of_strong_wind_on_heat_day\": 0.5\n      }\n    },\n    {\n      \"description\": \"季节性温度变化趋势：六月平均最高气温为 32°C，最低气温为 17°C\",\n      \"details\": {\n        \"average_temperature_2m_max_in_june\": 32.0,\n        \"average_temperature_2m_min_in_june\": 17.0\n      }\n    }\n  ]\n}",
+  "parsed": {
+    "entities": [
+      {
+        "id": "E1",
+        "type": "WeatherRecord",
+        "name": "2023-06-08 Weather Record",
+        "properties": {
+          "temperature_2m_max": 31.4,
+          "temperature_2m_min": 16.4,
+          "precipitation_sum": 0.0,
+          "wind_speed_10m_max": 20.9,
+          "relative_humidity_2m_mean": 24
+        }
+      },
+      {
+        "id": "E2",
+        "type": "WeatherEvent",
+        "name": "Dry Streak",
+        "properties": {
+          "duration": 10,
+          "start_date": "2023-06-08",
+          "end_date": "2023-06-17"
+        }
+      },
+      {
+        "id": "E3",
+        "type": "Location",
+        "name": "Sample Location",
+        "properties": {}
+      },
+      {
+        "id": "E4",
+        "type": "TimePeriod",
+        "name": "June 2023",
+        "properties": {
+          "start_date": "2023-06-01",
+          "end_date": "2023-06-30"
+        }
+      },
+      {
+        "id": "E5",
+        "type": "WeatherEvent",
+        "name": "Heat Day on 2023-06-22",
+        "properties": {
+          "date": "2023-06-22",
+          "temperature_2m_max": 35.3
+        }
+      },
+      {
+        "id": "E6",
+        "type": "WeatherEvent",
+        "name": "Rainy Day on 2023-06-18",
+        "properties": {
+          "date": "2023-06-18",
+          "precipitation_sum": 9.1
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "source": "E1",
+        "target": "E3",
+        "type": "OCCURRED_AT",
+        "properties": {}
+      },
+      {
+        "source": "E2",
+        "target": "E3",
+        "type": "OCCURRED_AT",
+        "properties": {}
+      },
+      {
+        "source": "E1",
+        "target": "E4",
+        "type": "OCCURRED_IN",
+        "properties": {}
+      },
+      {
+        "source": "E2",
+        "target": "E4",
+        "type": "OCCURRED_IN",
+        "properties": {}
+      },
+      {
+        "source": "E5",
+        "target": "E3",
+        "type": "OCCURRED_AT",
+        "properties": {}
+      },
+      {
+        "source": "E5",
+        "target": "E4",
+        "type": "OCCURRED_IN",
+        "properties": {}
+      },
+      {
+        "source": "E6",
+        "target": "E3",
+        "type": "OCCURRED_AT",
+        "properties": {}
+      },
+      {
+        "source": "E6",
+        "target": "E4",
+        "type": "OCCURRED_IN",
+        "properties": {}
+      },
+      {
+        "source": "E2",
+        "target": "E6",
+        "type": "ENDED_BY",
+        "properties": {}
+      }
+    ],
+    "rules": [
+      {
+        "description": "连续干旱超过 10 天后出现降雨的概率为 100%",
+        "details": {
+          "dry_streak_duration": 10,
+          "probability_of_rain_after_dry_streak": 1.0
+        }
+      },
+      {
+        "description": "高温日与大风日的共现关系：在高温日中，有 50% 的日子也是强风日",
+        "details": {
+          "heat_day_count": 1,
+          "strong_wind_on_heat_day_count": 1,
+          "probability_of_strong_wind_on_heat_day": 0.5
+        }
+      },
+      {
+        "description": "季节性温度变化趋势：六月平均最高气温为 32°C，最低气温为 17°C",
+        "details": {
+          "average_temperature_2m_max_in_june": 32.0,
+          "average_temperature_2m_min_in_june": 17.0
+        }
+      }
+    ]
+  }
+}
