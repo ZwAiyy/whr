@@ -2,6 +2,7 @@
 生成天气知识图谱项目 PPT
 运行: uv run create_ppt.py
 输出: weather_knowledge_graph.pptx
+
 """
 
 from pptx import Presentation
