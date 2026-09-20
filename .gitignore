@@ -19,7 +19,7 @@ node_modules/
 .mimocode/
 .pytest_cache/
 .ipynb_checkpoints/
-
+Lable_Studio
 # ---------- 密钥与本地配置 ----------
 .env
 .env.*
