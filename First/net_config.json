@@ -1,0 +1,23 @@
+{
+    "account": "22330874001",
+    "password": "Wxhwf20031103..",
+    "server_base": "http://172.22.5.2:801",
+    "login_path": "/eportal/portal/login",
+    "logout_path": "/eportal/portal/mac/unbind",
+    "extra_login_params": {
+        "callback": "dr1003",
+        "login_method": "1",
+        "wlan_user_ipv6": "",
+        "wlan_user_mac": "000000000000",
+        "wlan_ac_ip": "",
+        "wlan_ac_name": "",
+        "jsVersion": "4.2",
+        "terminal_type": "1",
+        "lang": "zh-cn",
+        "v": "2091"
+    },
+    "extra_logout_params": {
+        "callback": "dr1002",
+        "wlan_user_mac": "000000000000"
+    }
+}

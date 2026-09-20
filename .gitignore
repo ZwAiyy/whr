@@ -1,10 +1,35 @@
-# Python-generated files
+# ---------- Python 环境与构建产物 ----------
+.venv/
+venv/
+env/
 __pycache__/
-*.py[oc]
+*.py[cod]
+*.egg-info/
 build/
 dist/
 wheels/
-*.egg-info
 
-# Virtual environments
-.venv
+# ---------- 大型数据集 / 权重（超过 GitHub 单文件 100MB 限制）----------
+data/
+*.tar.gz
+*.zip
+
+# ---------- 依赖与工具缓存 ----------
+node_modules/
+.mimocode/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---------- 密钥与本地配置 ----------
+.env
+.env.*
+!.env.example
+
+# ---------- IDE ----------
+.idea/
+*.iml
+.vscode/*.log
+
+# ---------- 仓库迁移备份 ----------
+.git-orig-backup/
+*.orig
